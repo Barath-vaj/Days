@@ -1,0 +1,18 @@
+from datetime import datetime
+
+def days_between_dates(date1, date2):
+    date_format = '%Y-%m-%d'
+    dt1 = datetime.strptime(date1, date_format)
+    dt2 = datetime.strptime(date2, date_format)
+    delta = dt2 - dt1
+    return delta.days
+
+
+date1 = input("Enter the first date (YYYY-MM-DD): ")
+date2 = input("Enter the second date (YYYY-MM-DD): ")
+
+
+days_difference = days_between_dates(date1, date2)
+
+
+print(f'Number of days between {date1} and {date2}: {days_difference}')
